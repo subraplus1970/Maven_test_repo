@@ -27,27 +27,6 @@
                </execution>     
             </executions>
          </plugin>
-         </plugin>
-         <plugin>
-            <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>cobertura-maven-plugin</artifactId>
-            <version>2.7</version>
-            <configuration>
-                <formats>
-                    <format>xml</format>
-                </formats>
-                <check/>
-            </configuration>
-            <executions>
-                <execution>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>cobertura</goal>
-                    </goals>
-                </execution>
-            </executions>
-            </plugins>
-      </plugins>
+         </plugins>
    </build>
 </project>
