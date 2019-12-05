@@ -14,19 +14,6 @@
             <version>1.1</version>
             <executions>
                <execution>
-                  <id>id.pre-clean</id>
-                  <phase>pre-clean</phase>
-                  <goals>
-                     <goal>run</goal>
-                  </goals>
-                  <configuration>
-                     <tasks>
-                        <echo>pre-clean phase</echo>
-                     </tasks>
-                  </configuration>
-               </execution>
-            
-               <execution>
                   <id>id.clean</id>
                   <phase>clean</phase>
                   <goals>
@@ -37,20 +24,7 @@
                         <echo>clean phase</echo>
                      </tasks>
                   </configuration>
-               </execution>
-            
-               <execution>
-                  <id>id.post-clean</id>
-                  <phase>post-clean</phase>
-                  <goals>
-                     <goal>run</goal>
-                  </goals>
-                  <configuration>
-                     <tasks>
-                        <echo>post-clean phase</echo>
-                     </tasks>
-                  </configuration>
-               </execution>
+               </execution>     
             </executions>
          </plugin>
       </plugins>
