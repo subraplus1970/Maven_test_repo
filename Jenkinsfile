@@ -1,10 +1,10 @@
-pipeline {
-    agent { docker { image 'maven:3.3.3' } }
-    stages {
-        stage('build') {
-            steps {
-                sh 'mvn --version'
-            }
+node('master') {
+    stage('scm') {
+        checkout scm
+    }
+    stage('build') {
+        withMaven(jdk: 'JDK9.0.1', maven: 'Maven3.5.2') {
+            sh 'mvn clean install'
         }
     }
 }
