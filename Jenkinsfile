@@ -1,8 +1,28 @@
-stage('Build') {
-  build 'Guru99 Pipeline'
+pipeline {
+
+    agent any
+    tools {
+        maven 'Maven_3.6.1' 
+    }
+    stages {
+        stage('Compile stage') {
+            steps {
+                bat "mvn clean compile" 
+        }
+    }
+
+         stage('testing stage') {
+             steps {
+                bat "mvn test"
+        }
+    }
+
+          stage('deployment stage') {
+              steps {
+                bat "mvn deploy"
+        }
+    }
+
+  }
+
 }
-stage('Test') {
-  build 'subra_test'
-}
-stage('Deploy') {
-  build 'Devops_Pipeline'
